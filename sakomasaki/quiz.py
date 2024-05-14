@@ -1,12 +1,11 @@
-children = int(input("child?"))
-normal = int(input("normal?"))
-elderly = int(input("elder?"))
+import sys
+from decimal import Decimal,ROUND_HALF_UP
+args = sys.argv
+a = int(args[1])
+b = int(args[2])
+c = int(args[3])
 
-totalnum = children + normal + elderly
-
-sum = children*500 + normal*1000 + elderly*700
-if totalnum>=10:
-    print("you gonna discount")
-    sum*=0.8
-
-print("子供:{0},大人:{1},年配:{2},計{3}人,{4}円".format(children,normal,elderly,totalnum,sum))
+if (a>=50 and b>=50 and c>=50) and ((a>=70 and b>=70 and c>=70) or (a+b+c)>220):
+    print("合格です")
+else:
+    print("不合格です")
