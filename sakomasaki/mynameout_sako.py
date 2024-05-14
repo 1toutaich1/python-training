@@ -1,4 +1,4 @@
 import sys
 args = sys.argv
-name =args[1]
-print("Hello" , name,"!")
+a = args[1]
+print("I dont\'t like \""+args[1]+"\"",end="")
