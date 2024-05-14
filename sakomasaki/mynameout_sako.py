@@ -1,2 +1,2 @@
-name = Tato Tokyo
+name = Taro Tokyo
 print("Hello" , name)
