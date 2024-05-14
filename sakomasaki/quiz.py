@@ -1,11 +1,12 @@
-user = input("type jikyuu:")
-jikyu = int(user)
+children = int(input("child?"))
+normal = int(input("normal?"))
+elderly = int(input("elder?"))
 
-user = input("how long:")
-jikan = int(user)
+totalnum = children + normal + elderly
 
-kyuryou=jikyu*jikan
+sum = children*500 + normal*1000 + elderly*700
+if totalnum>=10:
+    print("you gonna discount")
+    sum*=0.8
 
-fmt= """時給{0}円で{1}時間働いたので給料は{2}円です."""
-desc=fmt.format(jikyu,jikan,kyuryou)
-print(desc)
+print("子供:{0},大人:{1},年配:{2},計{3}人,{4}円".format(children,normal,elderly,totalnum,sum))
