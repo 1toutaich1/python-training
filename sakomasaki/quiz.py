@@ -1,4 +1,7 @@
 import sys
 args = sys.argv
-a = args[1]
-print("I dont\'t like \""+args[1]+"\"",end="")
+num = int(args[1])
+if num%2==0 :
+    print("偶数")
+else:
+    print("奇数")
