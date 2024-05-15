@@ -1,9 +1,8 @@
 import sys
+from decimal import Decimal, ROUND_HALF_UP
 args = sys.argv
-a = int(args[1])
-anim=["giraffe", "tiger", "zebra", "elephant", "lion"]
-anim.insert(a,args[2])
-del anim[-1]
-anim.sort()
+dist={"東京":0.00,"品川":6.78,"新横浜":25.54,"名古屋":342.02,"京都":476.31,"新大阪":515.35}
+dis=abs((dist[args[1]]-dist[args[2]]))
+dis=Decimal(str(dis)).quantize(Decimal("0.01"),rounding=ROUND_HALF_UP)
+print(dis,end="")
 
-print(anim,end="")
