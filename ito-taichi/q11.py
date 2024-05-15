@@ -1,3 +1,5 @@
+# リストを操作して出力
+
 import sys
 args = sys.argv
 

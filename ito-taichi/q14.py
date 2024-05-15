@@ -1,3 +1,5 @@
+# 英文のn番目の単語
+
 import sys
 args = sys.argv
 
