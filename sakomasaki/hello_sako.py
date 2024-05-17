@@ -7,7 +7,7 @@ maxp = max(items.value())
 def pur_able(a):
     for item in items:
         if a >= items[item]:
-        print(item+"："+str(items[item])+"円")
+            print(item+"："+str(items[item])+"円")
 
 pur_able(maxp)
 
