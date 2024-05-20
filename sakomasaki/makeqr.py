@@ -1,8 +1,7 @@
 import os 
 import qrcode
-
-img=qrcode.make("https://www.google.co.jp/")
-
-path=os.path.join("../sakomasaki","test01.png")
-
+import sys
+args = sys.argv
+img=qrcode.make(args[1])
+path=os.path.join("../sakomasaki",args[2])
 img.save(path)
