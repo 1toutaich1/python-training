@@ -6,5 +6,3 @@ def calcsalary(sal):
         tax=0.1*sal
     tax= Decimal(str(tax)).quantize(Decimal("0"),rounding=ROUND_HALF_UP)
     return (sal-tax),tax
-
-
