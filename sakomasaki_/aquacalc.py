@@ -13,7 +13,6 @@ dat[0]=numdate
 print(dat)
 datt=date(dat[0], dat[1], dat[2])
 
-
 dt=date(2022,6,4)
 dow=datt.strftime("%a")
 
