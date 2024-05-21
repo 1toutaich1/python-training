@@ -14,9 +14,11 @@ child_cnt = int(args[3])
 no_price = [2000,2400]
 ch_price = [1200,1500]
 
+# 祝日を判定
 def is_holiday(date):
     return session.query(Holiday).filter_by(holi_date=date).count() >= 1
 
+# 土日もしくは祝日ならTrue
 is_ok = True if dt == "Sat" or dt == "Sun" or is_holiday(dt_time) else False
  
 ans = no_price[is_ok] * normal_cnt + ch_price[is_ok] * child_cnt
