@@ -1,7 +1,6 @@
 from datetime import date
 import datetime
 import sys
-from datetime import date
 from database import session
 from table import Holiday
 args = sys.argv
