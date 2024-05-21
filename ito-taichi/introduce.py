@@ -6,6 +6,7 @@ class Intro:
     
     def name_out(self):
         nametxt = f"私の名前は、{self.name}です"
+        # nametxt = f"My name is {self.name}"
         return nametxt
 
     def age_out(self):
