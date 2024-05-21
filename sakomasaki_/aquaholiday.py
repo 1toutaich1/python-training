@@ -5,9 +5,6 @@ from database import session
 from table import Holiday
 args = sys.argv
 
-
-sum=0
-
 #来場日input を日付型に変換
 numdate=args[1]
 datt=date(int(numdate[:4]), int(numdate[4:6]), int(numdate[6:]))
