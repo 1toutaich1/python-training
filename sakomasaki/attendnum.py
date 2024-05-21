@@ -1,7 +1,6 @@
 from datetime import date
 import datetime
 import sys
-from datetime import date
 from database import session
 from makeattendnum import Attendnum
 from sqlalchemy.sql import func
@@ -10,7 +9,7 @@ args = sys.argv
 numdate=args[1]
 datt=date(int(numdate[:4]), int(numdate[4:6]), int(numdate[6:]))
 
-#キャンセルを考慮しない場合
+#
 isholiday = session.query(Attendnum.entry_date).filter_by(entry_date=numdate).count()
 
 ##キャンセルに対応させる

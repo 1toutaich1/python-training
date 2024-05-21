@@ -3,7 +3,7 @@ from sqlalchemy import Column, String, Date, Integer, Numeric, DateTime
 from database import Base
 from database import ENGINE
 
-#テーブル：Holidayの定義
+#テーブル：Attendnumの定義
 class Attendnum(Base):
     __tablename__ = 'attendnum'
     entry_date = Column('entry_date', Date, primary_key = True)
