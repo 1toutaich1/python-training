@@ -29,8 +29,8 @@ def is_payment_over(pay):
         is_payment_over(new_pay)
     return
 
-def input_item():
-    return input("何を購入しますか(商品名/cancel)")
+# def input_item():
+#     return input("何を購入しますか(商品名/cancel)")
 
 def is_item_exsist(item):
     if not item in dict:
@@ -40,16 +40,15 @@ def is_item_exsist(item):
 
 # 再度購入
 def is_repurchase(money):
-    if money < MIN_PRICE:
-        return False
-    return True
+    return money < MIN_PRICE
 
 def back_money(money):
+    new_money = money
     ans = [0,0,0,0,0,0,0]
     coins = [5000,2000,1000,500,100,50,10]
     for i in range(len(coins)):
-        while (money // coins[i] >= 1):
-            money -= coins[i]
+        while (new_money // coins[i] >= 1):
+            new_money -= coins[i]
             ans[i] += 1
     print("おつり")
     for i in range(len(coins)):
@@ -58,7 +57,7 @@ def back_money(money):
 def buy(money):
     is_payment_over(money)
 
-    i_item = input_item()
+    i_item = input("何を購入しますか(商品名/cancel)")
     if i_item == "cancel": return money
 
     # 商品の存在チェック
@@ -69,13 +68,13 @@ def buy(money):
     print(f"残金:{money}円")
     
     # 再度購入できる場合
-    if not is_repurchase(money):
+    if money < MIN_PRICE:
         return money
 
     is_continue = input("続けて購入しますか(Y/N)")
     if is_continue == "Y":
         buy(money)
-    else:
+    elif is_continue == "N":
         return money
 
 def main():
